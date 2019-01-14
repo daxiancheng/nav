@@ -80,10 +80,92 @@
                             <use xlink:href="#icon-weibo"></use>
                         </svg>
                     </a>
-                
             </footer>
-        </div>
-        
+        </div> 
     </main>
+    <div class="downloadButton">
+    <a href="resume/1.jpg" class="button" download>下载图片简历</a>
+    </div>
+    <div class="resume">
+    <p>
+        那个男子立体的如五官刀刻般俊美，整个人发出一种威震天下的王者之<br>气，邪恶而俊美的脸上，噙着一抹放荡不拘的微笑。
+    </p>
+    </div>
+    <div class="skillTitle"><h2>技能</h2></div>
+    <section class="skill">
+		<ol class="clearfix">
+			<li>
+				<h3>HTML&CSS</h3>
+				<div class="sectionbar">
+					<div class="sectionbar_inner1"></div>
+				</div>
+			</li>
+			<li>
+				<h3>Javascript</h3>
+				<div class="sectionbar">
+					<div class="sectionbar_inner2"></div>
+				</div>
+			</li>
+			<li>
+				<h3>Vue</h3>
+				<div class="sectionbar">
+					<div class="sectionbar_inner3"></div>
+				</div>
+			</li>
+			<li>
+				<h3>PHP</h3>
+				<div class="sectionbar">
+					<div class="sectionbar_inner4"></div>
+				</div>
+			</li>
+			<li>
+				<h3>HTTP</h3>
+				<div class="sectionbar">
+					<div class="sectionbar_inner5"></div>
+				</div>
+			</li>
+			<li>
+				<h3>Mysql</h3>
+				<div class="sectionbar">
+					<div class="sectionbar_inner6"></div>
+				</div>
+			</li>
+		</ol>
+    </section>
+    <section class="production">
+            <h2>作品集</h2>
+            <nav>
+                <ol class="clearfix">
+                    <li id="production1">
+                        <h3>全部</h3> 
+                    </li>
+                    <li id="production2">
+                        <h3>框架</h3>
+                    </li>
+                    <li id="production3">
+                        <h3>原生JS&CSS</h3>
+                    </li>
+                </ol>
+            <div  id="switchover" class="navBar_box navBar1">
+                <div class="navBar"></div>
+            </div>
+            </nav>
+        <script>
+            production1.onclick=function(){
+                switchover.className = "navBar_box navBar1"
+            }
+            production2.onclick=function(){
+                switchover.className = "navBar_box navBar2"
+            }
+            production3.onclick=function(){
+                switchover.className = "navBar_box navBar3"
+            }
+        </script>
+        <div class="works">
+            <div class="big"><img src="./img/1.jpg" alt=""></div>
+            <div class="small1"><img src="./img/2.jpg" alt=""></div>
+            <div class="small2"><img src="./img/3.jpg" alt=""></div>
+        </div>
+    </section>
 </body>
 </html>

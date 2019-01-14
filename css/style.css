@@ -5,6 +5,7 @@ body{
 *{
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 a{
     text-decoration: none;
@@ -78,19 +79,20 @@ margin-right: 4px;
     margin-left: 65px;
     width: 50%;
 }
+body main{
+    margin-top:-300px;
+}
 .userCard{
     max-width: 940px;
     margin: 0 auto;
     background-color: #fff;
-    position: absolute;
-    top: 40%;
-    left: calc(50% - 470px);
+    box-shadow: 0px 2px 1px 1px rgba(0,0,0,0.2);
 }
 .userCard_1{
     padding: 50px;
 }
 .userCard .welcome{
-    background-color: #e6686a;
+    background-color: #5a5a5a;
     padding: 4px 16px; 
     position: relative;
     display: inline-block;
@@ -101,7 +103,7 @@ margin-right: 4px;
 .userCard .triangle{
     width: 0;
     border: 10px solid transparent;
-    border-left-color: #e6686a;
+    border-left-color: #5a5a5a;
     border-top-width: 0;
     display: block;
     position: absolute;
@@ -130,7 +132,7 @@ hr{
     padding: 5px 0;
 }
 .userCard footer{
-    background-color: #E6686A;
+    background-color: #5a5a5a;
     text-align: center;
     display: block;
 }
@@ -144,11 +146,189 @@ hr{
     line-height: 30px;
 }
 .userCard footer a:hover{
-    background-color: #CF5D5F;
+    background-color: #242424;
 }
 .userCard footer a svg{
     width: 30px;
     height: 30px;
     fill: white;
     vertical-align: top;
+}
+.downloadButton{
+    text-align: center;
+    margin: 30px 0;
+}
+.downloadButton .button{
+    padding: 21px 55px;
+    border: 1px solid #cdcfd1;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 16px;
+    color: #3d4451;
+    transition: box-shadow 0.3s;
+}
+.downloadButton .button:hover{
+    box-shadow: 0px 4px 6px 2px rgba(0,0,0,0.2);
+}
+.resume{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.resume p{
+    font-family: "楷体";
+    line-height: 1.4;
+    font-size: 18px;
+}
+.skillTitle{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #3d4451;
+    
+}
+.skillTitle h2{
+    font-size: 18px;
+}
+section.skill{
+    background-color: white;
+    max-width: 940px;
+    box-sizing: border-box;
+    padding: 30px 50px;
+    margin: 0 auto;
+
+}
+.skill li{
+    float: left;
+    width: 48%;
+    margin: 10px 0;
+}
+.sectionbar{
+    height: 5px;
+    background-color: #9f9d9e;
+    margin-top: 10px;
+    border-radius: 2px;
+}
+.sectionbar_inner1{
+    height: 100%;
+    background-color: #242424;
+    width: 70%;
+    border-radius: 2px;
+}
+.sectionbar_inner2{
+    height: 80%;
+    background-color: #242424;
+    width: 60%;
+    border-radius: 2px;
+}
+.sectionbar_inner3{
+    height: 100%;
+    background-color: #242424;
+    width: 90%;
+    border-radius: 2px;
+}
+.sectionbar_inner4{
+    height: 100%;
+    background-color: #242424;
+    width: 40%;
+    border-radius: 2px;
+}
+.sectionbar_inner5{
+    height: 100%;
+    background-color: #242424;
+    width: 60%;
+    border-radius: 2px;
+}
+.sectionbar_inner6{
+    height: 100%;
+    background-color: #242424;
+    width: 50%;
+    border-radius: 2px;
+}
+.skill ol li:nth-child(even){
+    float: right;
+}
+.skill h3{
+    font-size: 14px;
+    font-weight: normal;
+}
+.production h2{
+    margin: 40px 0 20px;
+    color: #3d4451;
+    font-size: 16px;
+}
+.production{
+    text-align: center;
+    max-width: 940px;
+    margin: 0 auto;
+}
+.production li{
+    float: left;
+    cursor: pointer;
+    
+}
+.production nav{
+    display: inline-block;
+    vertical-align: top;
+}
+.production ol{
+    display: inline-block;
+    vertical-align: top;
+}
+.production li h3{
+    font-size: 16px;
+    font-weight: normal;
+}
+.production li:nth-child(2){
+    margin: 0 20px;
+}
+.navBar_box{
+    height: 5px;
+    background-color: #fff;
+    border-radius: 2px;
+    margin: 4px 0 20px 0px;
+}
+.navBar{
+    height: 5px;
+    background-color: black;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+.navBar_box.navBar1 .navBar{
+    width: 31px;
+    margin-left:0;
+}
+.navBar_box.navBar2 .navBar{
+    width: 31px;
+    margin-left:52px;
+}
+.navBar_box.navBar3 .navBar{
+    width: 90px;
+    margin-left:105px;
+}
+.production .works{
+    width: 940px;
+    height: 640px;
+    position: relative;
+    margin: 10px 0 40px 0;
+}
+.production .works .big{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 600px;
+    height: 640px;
+}
+.production .works .small1{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 301px;
+    height: 301px;
+}
+.production .works .small2{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 301px;
+    height: 301px;
 }
