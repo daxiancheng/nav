@@ -8,15 +8,66 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="//at.alicdn.com/t/font_1012858_zrwantvo4x.js"></script>
     <style type="text/css">
+        .loading{
+            width:200px;
+            height:200px;
+            position:relative;
+  
+}
+        .loading::before,.loading::after{
+            content:'';
+            width:0px;
+            height:0px;
+            border-radius:50%;
+            background-color: black;
+            position:absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            margin:auto;
+            animation:s 1.5s infinite linear;
+}
+.loading::after{
+  animation-delay:0.75s
+}
+@keyframes s{
+  0%{
+    width:0;height:0;opacity:1;
+  }
+  100%{
+    width:100px;height:100px;opacity:0;
+  }
+}
         .icon {
            width: 1em; height: 1em;
            vertical-align: -0.15em;
            fill: currentColor;
            overflow: hidden;
         }
+        
+  .siteWelcome{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #888;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+  .siteWelcome.active{
+      display: flex;
+  }
     </style>
 </head>
 <body>
+    <div class="siteWelcome active" id="siteWelcome">
+            <div class="loading"></div>
+    </div>
+    
     <div class="nav_box clearfix">
          <a href="" class="logo">
             <span class="rs">RS</span><span class="card">card</span>
@@ -167,5 +218,11 @@
             <div class="small2"><img src="./img/3.jpg" alt=""></div>
         </div>
     </section>
+    <script>
+        setTimeout(function(){
+            siteWelcome.classList.remove('active')
+        },1000)
+        
+    </script>
 </body>
 </html>
