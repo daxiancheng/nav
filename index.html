@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,76 +9,103 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="//at.alicdn.com/t/font_1012858_zrwantvo4x.js"></script>
     <style type="text/css">
-        .loading{
-            width:200px;
-            height:200px;
-            position:relative;
-  
-}
-        .loading::before,.loading::after{
-            content:'';
-            width:0px;
-            height:0px;
-            border-radius:50%;
-            background-color: black;
-            position:absolute;
-            top:0;
-            left:0;
-            right:0;
-            bottom:0;
-            margin:auto;
-            animation:s 1.5s infinite linear;
-}
-.loading::after{
-  animation-delay:0.75s
-}
-@keyframes s{
-  0%{
-    width:0;height:0;opacity:1;
-  }
-  100%{
-    width:100px;height:100px;opacity:0;
-  }
-}
-        .icon {
-           width: 1em; height: 1em;
-           vertical-align: -0.15em;
-           fill: currentColor;
-           overflow: hidden;
+        .loading {
+            width: 200px;
+            height: 200px;
+            position: relative;
+
         }
-        
-  .siteWelcome{
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #888;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-  }
-  .siteWelcome.active{
-      display: flex;
-  }
+
+        .loading::before,
+        .loading::after {
+            content: '';
+            width: 0px;
+            height: 0px;
+            border-radius: 50%;
+            background-color: black;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            animation: s 1.5s infinite linear;
+        }
+
+        .loading::after {
+            animation-delay: 0.75s
+        }
+
+        @keyframes s {
+            0% {
+                width: 0;
+                height: 0;
+                opacity: 1;
+            }
+
+            100% {
+                width: 100px;
+                height: 100px;
+                opacity: 0;
+            }
+        }
+
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+
+        .siteWelcome {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #888;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+        }
+
+        .siteWelcome.active {
+            display: flex;
+        }
     </style>
 </head>
+
 <body>
     <div class="siteWelcome active" id="siteWelcome">
-            <div class="loading"></div>
+        <div class="loading"></div>
     </div>
-    
-    <div class="nav_box clearfix">
-         <a href="" class="logo">
+
+    <div class="nav_box clearfix" id="nav_box">
+        <a href="" class="logo">
             <span class="rs">RS</span><span class="card">card</span>
         </a>
-        <nav>
+        <nav class="meun">
             <ul class="clearfix">
-                <li><a href="">关于</a></li>
-                <li><a href="">技能</a></li>
+                <li><a href="#siteabout">关于</a></li>
+                <li class="submeun_box">
+                    <a  href="#siteskill">技能</a>
+                    <ul class="submeun">
+                        <li>技能1</li>
+                        <li>技能2</li>
+                        <li>技能3</li>
+                    </ul>
+                </li>
                 <li><a href="">经历</a></li>
-                <li><a href="">博客</a></li>
+                <li class="submeun_box">
+                    <a  href="#sitebolog">博客</a>
+                    <ul class="submeun">
+                        <li>博客1</li>
+                        <li>博客2</li>
+                        <li>博客3</li>
+                    </ul>
+                </li>
                 <li><a href="">爱好</a></li>
                 <li><a href="">地址</a></li>
                 <li><a href="">联系方式</a></li>
@@ -89,126 +117,128 @@
         <div class="mask"></div>
     </div>
     <main>
-        <div class="userCard">
-         <div class="userCard_1 clearfix">
-            <div class="picture">
-                <img src="./img/avatar.jpg" alt="头像" width="299px" height="347px">
-            </div>
-            <div class="text">
-                <span class="welcome">Hello!
+        <div class="userCard" id="siteabout">
+            <div class="userCard_1 clearfix">
+                <div class="picture">
+                    <img src="./img/avatar.jpg" alt="头像" width="299px" height="347px">
+                </div>
+                <div class="text">
+                    <span class="welcome">Hello!
                         <span class="triangle"></span>
-                </span>
-                
-                <h1>成焕兴</h1>
-                <p>即将成为前端开发工程师</p>
-                <hr>
-                <dl class="clearfix">
-                    <dt>年龄</dt>
-                    <dd>22</dd>
-                    <dt>所在城市</dt>
-                    <dd>杭州</dd>
-                    <dt>邮箱</dt>
-                    <dd>787129485@qq.com</dd>
-                    <dt>电话</dt>
-                    <dd>15846618921</dd>
-                </dl>
+                    </span>
+
+                    <h1>成焕兴</h1>
+                    <p>即将成为前端开发工程师</p>
+                    <hr>
+                    <dl class="clearfix">
+                        <dt>年龄</dt>
+                        <dd>22</dd>
+                        <dt>所在城市</dt>
+                        <dd>杭州</dd>
+                        <dt>邮箱</dt>
+                        <dd>787129485@qq.com</dd>
+                        <dt>电话</dt>
+                        <dd>15846618921</dd>
+                    </dl>
+                </div>
             </div>
-        </div>
             <footer class="clearfix">
-                
-                    <a href="">
-                        <svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-weixin"></use>
-                        </svg>
-                    </a>
-                    <a href="">
-                        <svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-web-icon-"></use>
-                        </svg>
-                    </a>
-                    <a href="">
-                        <svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-weibo"></use>
-                        </svg>
-                    </a>
+
+                <a href="">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-weixin"></use>
+                    </svg>
+                </a>
+                <a href="">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-web-icon-"></use>
+                    </svg>
+                </a>
+                <a href="">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-weibo"></use>
+                    </svg>
+                </a>
             </footer>
-        </div> 
+        </div>
     </main>
     <div class="downloadButton">
-    <a href="resume/1.jpg" class="button" download>下载图片简历</a>
+        <a href="resume/1.jpg" class="button" download>下载图片简历</a>
     </div>
     <div class="resume">
-    <p>
-        那个男子立体的如五官刀刻般俊美，整个人发出一种威震天下的王者之<br>气，邪恶而俊美的脸上，噙着一抹放荡不拘的微笑。
-    </p>
+        <p>
+            那个男子立体的如五官刀刻般俊美，整个人发出一种威震天下的王者之<br>气，邪恶而俊美的脸上，噙着一抹放荡不拘的微笑。
+        </p>
     </div>
-    <div class="skillTitle"><h2>技能</h2></div>
+    <div class="skillTitle" id="siteskill">
+        <h2>技能</h2>
+    </div>
     <section class="skill">
-		<ol class="clearfix">
-			<li>
-				<h3>HTML&CSS</h3>
-				<div class="sectionbar">
-					<div class="sectionbar_inner1"></div>
-				</div>
-			</li>
-			<li>
-				<h3>Javascript</h3>
-				<div class="sectionbar">
-					<div class="sectionbar_inner2"></div>
-				</div>
-			</li>
-			<li>
-				<h3>Vue</h3>
-				<div class="sectionbar">
-					<div class="sectionbar_inner3"></div>
-				</div>
-			</li>
-			<li>
-				<h3>PHP</h3>
-				<div class="sectionbar">
-					<div class="sectionbar_inner4"></div>
-				</div>
-			</li>
-			<li>
-				<h3>HTTP</h3>
-				<div class="sectionbar">
-					<div class="sectionbar_inner5"></div>
-				</div>
-			</li>
-			<li>
-				<h3>Mysql</h3>
-				<div class="sectionbar">
-					<div class="sectionbar_inner6"></div>
-				</div>
-			</li>
-		</ol>
+        <ol class="clearfix">
+            <li>
+                <h3>HTML&CSS</h3>
+                <div class="sectionbar">
+                    <div class="sectionbar_inner1"></div>
+                </div>
+            </li>
+            <li>
+                <h3>Javascript</h3>
+                <div class="sectionbar">
+                    <div class="sectionbar_inner2"></div>
+                </div>
+            </li>
+            <li>
+                <h3>Vue</h3>
+                <div class="sectionbar">
+                    <div class="sectionbar_inner3"></div>
+                </div>
+            </li>
+            <li>
+                <h3>PHP</h3>
+                <div class="sectionbar">
+                    <div class="sectionbar_inner4"></div>
+                </div>
+            </li>
+            <li>
+                <h3>HTTP</h3>
+                <div class="sectionbar">
+                    <div class="sectionbar_inner5"></div>
+                </div>
+            </li>
+            <li>
+                <h3>Mysql</h3>
+                <div class="sectionbar">
+                    <div class="sectionbar_inner6"></div>
+                </div>
+            </li>
+        </ol>
     </section>
-    <section class="production">
-            <h2>作品集</h2>
-            <nav>
-                <ol class="clearfix">
-                    <li id="production1">
-                        <h3>全部</h3> 
-                    </li>
-                    <li id="production2">
-                        <h3>框架</h3>
-                    </li>
-                    <li id="production3">
-                        <h3>原生JS&CSS</h3>
-                    </li>
-                </ol>
-            <div  id="switchover" class="navBar_box navBar1">
+    <section class="production" id="sitebolog">
+        <h2>作品集</h2>
+        <nav>
+            <ol class="clearfix">
+                <li id="production1">
+                    <h3>全部</h3>
+                </li>
+                <li id="production2">
+                    <h3>框架</h3>
+                </li>
+                <li id="production3">
+                    <h3>原生JS&CSS</h3>
+                </li>
+            </ol>
+            <div id="switchover" class="navBar_box navBar1">
                 <div class="navBar"></div>
             </div>
-            </nav>
+        </nav>
         <script>
-            production1.onclick=function(){
+            production1.onclick = function () {
                 switchover.className = "navBar_box navBar1"
             }
-            production2.onclick=function(){
+            production2.onclick = function () {
                 switchover.className = "navBar_box navBar2"
             }
-            production3.onclick=function(){
+            production3.onclick = function () {
                 switchover.className = "navBar_box navBar3"
             }
         </script>
@@ -219,10 +249,10 @@
         </div>
     </section>
     <script>
-        setTimeout(function(){
+        setTimeout(function () {
             siteWelcome.classList.remove('active')
-        },1000)
-        
+        }, 1000)
     </script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
