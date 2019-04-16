@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <script src="//at.alicdn.com/t/font_1012858_zrwantvo4x.js"></script>
     <style type="text/css">
         .loading {
@@ -90,7 +91,7 @@
             <ul class="clearfix">
                 <li><a href="#siteabout">关于</a></li>
                 <li class="submeun_box">
-                    <a  href="#siteskill">技能</a>
+                    <a href="#siteskill">技能</a>
                     <ul class="submeun">
                         <li>技能1</li>
                         <li>技能2</li>
@@ -99,7 +100,7 @@
                 </li>
                 <li><a href="">经历</a></li>
                 <li class="submeun_box">
-                    <a  href="#sitebolog">博客</a>
+                    <a href="#sitebolog">博客</a>
                     <ul class="submeun">
                         <li>博客1</li>
                         <li>博客2</li>
@@ -248,11 +249,22 @@
             <div class="small2"><img src="./img/3.jpg" alt=""></div>
         </div>
     </section>
+    <section class="messages" id="messages">
+        <h2>留言</h2>
+        <ol id="messages_ol"></ol>
+        <form id="messages_form">
+            <label>姓名:<input type="text" name="name"></label>
+            <label>留言:<input type="text" name="content"></label>
+            <input type="submit" value="提交">
+        </form>
+    </section>
     <script>
         setTimeout(function () {
             siteWelcome.classList.remove('active')
         }, 1000)
     </script>
+    <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.12.0/dist/av-live-query-min.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/message.js"></script>
 </body>
 </html>
